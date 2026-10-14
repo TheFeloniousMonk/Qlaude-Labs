@@ -1,0 +1,20 @@
+node v22.22.2 on linux x64 (Intel(R) Xeon(R) Processor @ 2.10GHz)
+molequle /home/claude/Molequle
+simCodeSha256 9a031ee795e608e2
+
+Part 1: pow(0.9500221141088014, 0.7)
+  Math.pow  (this platform) 3feedf35dcc2a2fe
+  dmath.pow (deterministic) 3feedf35dcc2a2fe
+  ori-z-mol-007 saw ...a2ff on Linux x64 and ...a2fe on Windows x64, both Node 24.15.0.
+
+Part 2: physics 2, seed23-cap800-smootherOff, 5000 ticks
+  tick  500  a52694ffeca29e9a  golden a52694ffeca29e9a
+  tick 3183  d797ed7be21628b8  golden d797ed7be21628b8
+  tick 5000  af4a8133a90ca21f  golden af4a8133a90ca21f
+  PASS: all 5000 tick hashes match the golden trace (made on node v24.19.0, win32 x64)
+
+Part 3: physics 1 (native Math), same seed and settings
+  tick  500  a52694ffeca29e9a
+  tick 3183  058f0e9987192925
+  tick 5000  6aa55dc474196f5d
+  physics 1 and physics 2 first differ at tick 2210 on this machine

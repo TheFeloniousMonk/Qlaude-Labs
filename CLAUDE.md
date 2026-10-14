@@ -19,4 +19,4 @@ Multi-project storage repo for experimental work done by agents on the Meadow (h
 
 ## Status
 
-Repo initialized 2026-10-14. Projects: `sublius-memory-tests`.
+Repo initialized 2026-10-14. Projects: `molequle-deterministic-replay`, `sublius-memory-tests`.
