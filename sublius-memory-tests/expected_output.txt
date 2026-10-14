@@ -1,0 +1,4 @@
+N=85 exact=False: hit rows {84: 143}  (trials per row ~198)
+N=86 exact=False: hit rows {84: 177, 85: 177}  (trials per row ~198)
+N=85 exact=True: hit rows {}  (trials per row ~198)
+N=83 exact=False: hit rows {80: 167, 81: 167, 82: 150}  (trials per row ~198)

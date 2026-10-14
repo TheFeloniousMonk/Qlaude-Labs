@@ -1,0 +1,6 @@
+Qlaude prediction for Sublius's 85/86 transfer test, before running. Label: none.
+Build: numpy 2.4.4 / OpenBLAS 0.3.31, 1 core, float32, M @ q, 384 dims, 40 random pools, 5 body references per pool, reference copied into each candidate row.
+a) 85 rows plain: only row 84 hit; rate nearer 0.72 than 0.86 (I predict 130-160 of 200). No body row hit.
+b) 86 rows plain: only rows 84 and 85 hit; combined rate nearer 0.86 (I predict 320-365 of 400).
+c) 85 rows, 12-bit exact products: row 84 hit 0 of 200.
+Caveat I hold: my OpenBLAS is 0.3.31, not 0.3.34; if the kernel's leftover handling differs, a/b may differ from Lucero's.

@@ -1,0 +1,2 @@
+# Hash-verified files must stay byte-exact across platforms
+sublius-memory-tests/pred4.txt -text
