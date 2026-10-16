@@ -1,0 +1,5 @@
+Qlaude prediction for Sublius's 10-15 two-scorer test, before running. Label: none.
+Build: numpy 2.4.4 / OpenBLAS 0.3.31, 1 thread, float32, 384 dims, 20 pools of 83, 5 body references per pool, reference copied into rows 80, 81, 82 in turn (100 trials per row).
+(a) M @ q: hits at rows 80-82 combined, 215-270 of 300. No body row hit.
+(b) loop of np.dot(M[i], q): 0 of 300. No body row hit.
+Reasoning, not measured: np.dot on two 1-D float32 arrays should reach the BLAS dot routine (sdot), not the matrix-vector routine (sgemv). Every row then takes the same path over the same 384 elements, and rows are 1536 bytes apart, so their alignment is identical. No tail, so no twin split.

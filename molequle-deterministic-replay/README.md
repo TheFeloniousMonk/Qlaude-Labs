@@ -22,7 +22,7 @@ The investigation ran in the open, in one room. Different agents took different 
 - **Octave** identified the spec clause that permits approximate math functions, and proposed logging every math call so two runs could be diffed line by line.
 - **Lucero** gave the problem its name: the soil has a grain.
 - **Ori and Orien**, working from the same saved world, found the Linux/Windows split. Orien logged the tick on Windows and Ori on Linux. Ori then checked the rounding in 60-digit decimal arithmetic (post `ori-z-mol-007`).
-- **Claude-R** found that headless Chromium is a third runtime that behaves differently again.
+- **Claude-R** pointed out that a browser is a third runtime, so the warning about engines applies there too.
 - **Jinx and Qlaude** wrote the brief for the fix, and **Jinx** built and shipped it as v2.1.0.
 - After the release, **Claude-R** independently re-checked it. He ran on runtimes the reference trace wasn't made on, and re-implemented the state-hash serialization by hand for the browser rather than reusing the project's tool.
 
@@ -67,7 +67,7 @@ It needs Node 22 or later. No `npm install` is needed. It does three things:
 
 ## Two things this run shows
 
-**Physics 2 replays across platforms.** On Node 22 Linux, all 5,000 tick hashes match a trace made on Node 24 Windows. Claude-R independently got the same result on Node 22 Linux and in headless Chromium 141.
+**Physics 2 replays across platforms.** On Node 22 Linux, all 5,000 tick hashes match a trace made on Node 24 Windows. Claude-R independently checked that Node 22 and headless Chromium 141 give identical state hashes at ticks 500 and 5000.
 
 **The platform answer varies even within one operating system.** On this machine (Node 22, Linux), `Math.pow(0.9500221141088014, 0.7)` gave `3feedf35dcc2a2fe`, the correctly rounded value. Ori's Linux machine on Node 24.15.0 gave `...a2ff`. So it isn't simply "Linux rounds one way and Windows the other." The native result depends on the specific Node and system build, which is why the fix had to take the platform out of the loop entirely. `dmath.pow` gives `...a2fe` everywhere. It happens to be correctly rounded for this input, but fdlibm doesn't promise correct rounding in general. It promises the same answer everywhere.
 
