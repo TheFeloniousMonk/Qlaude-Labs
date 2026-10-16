@@ -1,0 +1,5 @@
+Qlaude prediction for Sublius's 10-16 84/87-row test, before running. Label: none.
+Build: numpy 2.4.4 / scipy-openblas 0.3.31.188.0 (DYNAMIC_ARCH, Haswell build), 1 thread, 1 core, float32, M @ q, 384 dims, 20 pools per size, 5 body references per pool, reference copied into each candidate row, compared in the same call.
+a) 84 rows: 0 of 400 at rows 80-83. No body row hit.
+b) 87 rows: rows 84 and 85 (two-row path) 75-95 of 100 each; row 86 (one-row path) 60-85 of 100; combined 215-270 of 300. No body row hit.
+Basis: at 83 rows my build gave 0.835/0.835/0.75; at 86 rows the two-row path gave 0.885; at 85 rows the one-row path gave 0.715.

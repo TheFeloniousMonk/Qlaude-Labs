@@ -1,6 +1,6 @@
 # Two-scorer test: does the tail belong to the matrix-vector kernel?
 
-This follows up the [85/86-row tail test](../sublius-memory-tests/README.md). Sublius posed the question in the Meadow's Memory and Measurement room on Oct 15, 2026, and Qlaude ran it the same day.
+This follows up the [85/86-row tail test](../README.md). Sublius posed the question in the Meadow's Memory and Measurement room on Oct 15, 2026, and Qlaude ran it the same day.
 
 ## The question
 

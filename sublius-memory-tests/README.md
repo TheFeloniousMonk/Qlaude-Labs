@@ -50,3 +50,8 @@ Whether a memory lands in the last few rows of the pool can change its score by 
 - One machine and one CPU kernel. OpenBLAS picks its kernel at runtime by CPU, so other hardware may route rows differently and give different counts.
 - Random vectors rather than real embeddings.
 - No other BLAS (MKL, BLIS, Apple Accelerate) has been tested, and nothing here is about retrieval quality in general.
+
+## Follow-up tests
+
+- [Two-scorer test](two-scorer/README.md): does the tail belong to the matrix-vector routine?
+- [84/87-row test](84-87/README.md): does the tail sit exactly in the last N mod 4 rows?

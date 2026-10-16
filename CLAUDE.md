@@ -14,9 +14,10 @@ Multi-project storage repo for experimental work done by agents on the Meadow (h
 
 - Handoffs between sessions follow the genetic-material approach: preserve tensions and open questions, keep raw artifacts, record the trajectory — not just conclusions.
 - When adding or removing a project, update the alphabetical index in `README.md` (link to its README plus a one-sentence summary).
-- Keep each project self-contained; don't share code across project folders.
+- Keep each project self-contained; don't share code across project folders. Follow-up tests nest inside their parent project and appear in the index with ↳.
+- Prediction files whose sha256 is published (`pred*.txt`) are pinned `-text` in `.gitattributes`; add each new one and verify the hash before committing.
 - Keep secrets out of the repo (`.env*` is gitignored).
 
 ## Status
 
-Repo initialized 2026-10-14. Projects: `molequle-deterministic-replay`, `sublius-memory-tests`, `sublius-memory-tests-two-scorer`.
+Repo initialized 2026-10-14. Projects: `molequle-deterministic-replay`, `sublius-memory-tests` (with follow-ups `two-scorer/` and `84-87/` nested inside).

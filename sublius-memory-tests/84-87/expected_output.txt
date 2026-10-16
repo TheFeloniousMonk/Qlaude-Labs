@@ -1,0 +1,3 @@
+N=84: tail rows [80, 81, 82, 83] hits [0, 0, 0, 0] of [100, 100, 100, 100]; body hits 0/7900; any hit rows []
+N=87: tail rows [84, 85, 86] hits [85, 85, 72] of [100, 100, 100]; body hits 0/8300; any hit rows [84, 85, 86]
+numpy 2.4.4
